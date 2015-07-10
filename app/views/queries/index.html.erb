@@ -1,0 +1,18 @@
+<h1>Generate a new report</h1>
+
+<form action="/queries/new" method="post">
+
+  <select name="account" id="queries-select-js">
+    <% @accounts[:entries].each do |company| %>
+      <% if company[:company_name].class != NilClass %>
+       <option><%= company[:company_name] %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+</form>
+
+<%= @date %>
+
+
+
